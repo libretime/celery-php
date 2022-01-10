@@ -53,7 +53,7 @@ abstract class AbstractAMQPConnector
             return 'php-amqplib-ssl';
         } elseif (class_exists('\AMQPConnection') && extension_loaded('amqp')) {
             return 'pecl';
-        } elseif (class_exists('\PhpAmqpLib\Connection\AMQPConnection')) {
+        } elseif (class_exists('\PhpAmqpLib\Connection\AMQPStreamConnection')) {
             return 'php-amqplib';
         } else {
             return 'unknown';

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file contains a PHP client to Celery distributed task queue
  *
@@ -67,7 +68,7 @@ class AMQPLibConnector extends AbstractAMQPConnector
 
     public function GetConnectionObject($details)
     {
-        return new \PhpAmqpLib\Connection\AMQPConnection(
+        return new \PhpAmqpLib\Connection\AMQPStreamConnection(
             $details['host'],
             $details['port'],
             $details['login'],
@@ -129,14 +130,14 @@ class AMQPLibConnector extends AbstractAMQPConnector
 
     /**
      * Return result of task execution for $task_id
-     * @param \PhpAmqpLib\Connection\AMQPConnection $connection
+     * @param \PhpAmqpLib\Connection\AMQPStreamConnection $connection
      * @param string $task_id Celery task identifier
      * @param int $expire expire time result queue, milliseconds
      * @param boolean $removeMessageFromQueue whether to remove message from queue
      * @return array array('body' => JSON-encoded message body, 'complete_result' => AMQPMessage object)
      * 			or false if result not ready yet
      */
-    public function GetMessageBody($connection, $task_id, $expire=0, $removeMessageFromQueue = true)
+    public function GetMessageBody($connection, $task_id, $expire = 0, $removeMessageFromQueue = true)
     {
         if (!$this->receiving_channel) {
             $ch = $connection->channel();

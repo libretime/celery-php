@@ -30,7 +30,7 @@
     },
     "require-dev": {
         "ext-amqp": "*",
-        "php-amqplib/php-amqplib": "*",
+        "php-amqplib/php-amqplib": ">=3.0",
         "phpunit/phpunit": "<6.0.0",
         "predis/predis": "*"
     },
