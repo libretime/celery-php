@@ -1,8 +1,16 @@
 {
-    "name": "massivescale/celery-php",
+    "name": "jooola/celery-php",
     "type": "library",
     "description": "PHP client for Celery task queue",
-    "keywords": ["celery", "amqp", "task", "cron", "queue", "redis", "python"],
+    "keywords": [
+        "celery",
+        "amqp",
+        "task",
+        "cron",
+        "queue",
+        "redis",
+        "python"
+    ],
     "homepage": "https://github.com/gjedeer/celery-php/",
     "support": {
         "issues": "https://github.com/gjedeer/celery-php/issues",
