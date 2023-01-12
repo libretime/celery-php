@@ -1,6 +1,6 @@
         <div class="credit">
 		    <hr class="separator" />
-			This software has been brought to you by 
+			This software has been brought to you by
 			{php}
 			$bullshit = array(
 				'<a href="http://massivescale.net/">Massive Scale - fast, scalable web applications</a>',
