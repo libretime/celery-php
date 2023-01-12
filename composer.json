@@ -1,5 +1,5 @@
 {
-  "name": "jooola/celery-php",
+  "name": "libretime/celery-php",
   "type": "library",
   "description": "PHP client for Celery task queue",
   "keywords": [
@@ -51,7 +51,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "3.0-dev"
+      "dev-main": "3.0-dev"
     }
   }
 }
